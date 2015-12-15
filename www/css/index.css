@@ -1,0 +1,254 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    background-color: #4f647b;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.top {
+    position: fixed;
+    z-index: 1;
+    background-color: #4f647b;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+h1 {
+    font-size:24px;
+    color:#ffffff;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    margin: 30px 0px 0px 0px;
+}
+
+h2 {
+    font-size:16px;
+    color:#ffffff;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:20px 6.5px;
+    text-align:center;
+    margin: 30px 0px 0px 0px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.navbarlist {
+    list-style-type: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    text-align: center;
+}
+
+.navbarlist > li {
+    display: inline-block;
+    float: none;
+    padding: 10px 7px;
+    text-align: center;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0.5px;
+    margin: 0px -2px;
+}
+
+.navbarlist > li > a:link {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.navbarlist > li > a:visited {
+    color: #ffffff;
+}
+
+.navbarlist > li.active {
+    background-color: #879db7;
+}
+
+.navbar {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-color: #ffffff;
+    background-color: #6985a5;
+}
+
+.allStories {
+    margin: 0px 0px;
+    padding: 0px;
+    position: absolute;
+    top: 115px;
+}
+
+.stories {
+    margin: 0px 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.stories > a > img {
+    margin: -3px 0px 0px 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+
+.titleBox {
+    position:absolute;
+    left: 0px;
+    top: 2px;
+    background-color: rgba(0,0,0,0.7);
+    margin: 0px;
+    padding: 0px;
+}
+
+.titleBox > h2 {
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0px 5px 0px 2px;
+    margin: 0px;
+}
+
+.explanationBox {
+    position:absolute;
+    left: 0px;
+    bottom: 7px;
+    background-color: rgba(0,0,0,0.7);
+    margin: 0px;
+    padding: 0px;
+}
+
+.explanationBox > p {
+    text-align: left;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: italic;
+    padding: 0px 5px 0px 4px;
+    margin: 3px 0px;
+}
+
+.storyPage {
+    background-color: white;
+    margin: -4px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
+    position: absolute;
+    top: 115px;
+}
+
+.storyPage > h2 {
+    color: black;
+    font-weight: 600;
+    margin: 0px;
+    padding: 7px 3px 3px 3px;
+    font-size: 22px;
+    text-align: left;
+}
+
+.storyPage > img {
+    margin: 3px 0px 0px 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+
+.storyPage > h3 {
+    font-weight: 600;
+    font-style: italic;
+    margin: 5px 0px 0px 5px;
+    font-size: 16px;
+}
+
+.storyPage > p {
+    font-size: 16px;
+    margin: 10px 3px 0px 5px;
+}
+
+.storyPage > p.caption {
+    font-size: 8px;
+    margin: 0px 3px 0px 5px;
+}
+
+.storyPage > p > a {
+    text-decoration: none;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
