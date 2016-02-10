@@ -198,7 +198,7 @@ h2 {
     text-align: left;
 }
 
-.neighborhoodPage > p > h2 > a:link {
+.neighborhoodPage > a:link {
     text-decoration: none;
     color: black;
 }
