@@ -190,10 +190,10 @@ h2 {
 }
 
 .neighborhoodPage > p {
-    text-decoration: none;
+    color: hotpink;
 }
 
-.neighborhoodPage > a {
+a {
     text-decoration: none;
 }
 
