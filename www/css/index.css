@@ -189,22 +189,12 @@ h2 {
     top: 115px;
 }
 
-.neighborhoodPage > h2 {
-    color: black;
-    font-weight: 600;
-    margin: 0px;
-    padding: 7px 3px 3px 3px;
-    font-size: 22px;
-    text-align: left;
-}
-
-.neighborhoodPage > a:link {
-    text-decoration: none;
-    color: black;
+.neighborhoodPage > a {
+    color: red;
 }
 
 .storyPage > h2 {
-    color: white;
+    color: black;
     font-weight: 600;
     margin: 0px;
     padding: 7px 3px 3px 3px;
