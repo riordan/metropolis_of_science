@@ -189,8 +189,8 @@ h2 {
     top: 115px;
 }
 
-.neighborhoodPage > a {
-    text-decoration: none;
+.neighborhoodPage > p {
+    text-decoration: underline;
 }
 
 .storyPage > h2 {
