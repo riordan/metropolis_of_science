@@ -198,9 +198,9 @@ h2 {
     text-align: left;
 }
 
-.neighborhoodPage > p > h2 > a {
+.neighborhoodPage > p > h2 > a:link {
     text-decoration: none;
-    color: hotpink;
+    color: white;
 }
 
 .storyPage > h2 {
