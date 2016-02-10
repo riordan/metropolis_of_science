@@ -190,7 +190,11 @@ h2 {
 }
 
 .neighborhoodPage > p {
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+.neighborhoodPage > a {
+    text-decoration: none;
 }
 
 .storyPage > h2 {
