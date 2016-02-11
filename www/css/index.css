@@ -191,8 +191,10 @@ h2 {
 }
 
 .neighborhoodPage > p {
-    border-top: 2px dashed;
-    border-bottom: 0.5px solid;
+    border-top-style: dashed;
+    border-bottom-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 0.5px;
 }
 
 a {
