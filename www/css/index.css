@@ -194,12 +194,14 @@ a {
     text-decoration: none;
 }
 
-.neighborhoodPage > p {
-    border-width: 0.5px;
-    border-style: none none solid none;
-    border-top-color: #ffffff;
-    border-top-width: 0px;
-    border-bottom-color: black;
+.neighborhoodPage > hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
 }
 
 .neighborhoodPage > h2 {
