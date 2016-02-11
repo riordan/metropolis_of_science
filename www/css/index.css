@@ -190,6 +190,10 @@ h2 {
     width: 100%;
 }
 
+.neighborhoodPage > p {
+    border-bottom-style: solid;
+}
+
 a {
     text-decoration: none;
 }
