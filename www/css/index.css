@@ -187,15 +187,13 @@ h2 {
     padding: 0px 0px 10px 0px;
     position: absolute;
     top: 115px;
-    max-width: 100%;
 }
 
 a {
-    color: black;
     text-decoration: none;
 }
 
-.neighborhoodPage > h2 {
+.neighborhoodPage > p > h2 > a {
     color: black;
     font-weight: 600;
     margin: 0px;
