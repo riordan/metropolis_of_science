@@ -202,6 +202,11 @@ a {
     text-align: left;
 }
 
+a.noBlue {
+    color:black;
+    text-decoration: underline;
+}
+
 .storyPage > h2 {
     color: black;
     font-weight: 600;
