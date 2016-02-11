@@ -197,7 +197,7 @@ a {
 .neighborhoodPage > p {
     border-width: 0.5px;
     border-style: none none solid none;
-    background-color: hotpink;
+    border-bottom-color: hotpink;
 }
 
 .neighborhoodPage > h2 {
