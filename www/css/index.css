@@ -191,7 +191,7 @@ h2 {
 }
 
 .neighborhoodPage > p {
-    border-bottom-style: solid;
+    border-bottom: 0.5px solid;
 }
 
 a {
