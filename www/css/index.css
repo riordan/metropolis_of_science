@@ -194,6 +194,12 @@ a {
     text-decoration: none;
 }
 
+.neighborhoodPage > p {
+    border-width: 0.5px;
+    border-style: none none solid none;
+    background-color: hotpink;
+}
+
 .neighborhoodPage > h2 {
     color: black;
     font-weight: 600;
@@ -201,7 +207,6 @@ a {
     padding: 7px 3px 3px 3px;
     font-size: 22px;
     text-align: left;
-    border-style: none none solid none;
 }
 
 a.noBlue {
