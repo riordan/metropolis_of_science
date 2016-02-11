@@ -193,7 +193,7 @@ a {
     text-decoration: none;
 }
 
-.neighborhoodPage > p > h2 > a {
+.neighborhoodPage > h2 {
     color: black;
     font-weight: 600;
     margin: 0px;
