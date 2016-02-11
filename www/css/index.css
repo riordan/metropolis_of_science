@@ -190,10 +190,6 @@ h2 {
     width: 100%;
 }
 
-.neighborhoodPage > p {
-    border-style: none none solid none;
-}
-
 a {
     text-decoration: none;
 }
@@ -205,6 +201,7 @@ a {
     padding: 7px 3px 3px 3px;
     font-size: 22px;
     text-align: left;
+    border-style: none none solid none;
 }
 
 a.noBlue {
