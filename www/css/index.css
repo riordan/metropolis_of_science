@@ -132,7 +132,8 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     border-style: inset;
-    border-width: 5px;
+    border-width: 0.5px;
+    height: 10px;
 }
 
 .stories {
@@ -230,7 +231,7 @@ a.noBlue {
 
 .storyPage > h2 {
     color: black;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0px;
     padding: 7px 3px 3px 3px;
     font-size: 22px;
