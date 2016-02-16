@@ -124,6 +124,17 @@ h2 {
     top: 115px;
 }
 
+.allStories > hr {
+    color: #6985a5;
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 0.5px;
+}
+
 .stories {
     margin: 0px 0px;
     padding: 0px;
