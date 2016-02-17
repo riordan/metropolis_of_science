@@ -248,8 +248,8 @@ a.noBlue {
 }
 
 .storyPage > img {
-    margin: 3px 0px 0px 0px;
-    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     max-width: 100%;
 }
 
