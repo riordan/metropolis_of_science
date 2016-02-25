@@ -10,7 +10,7 @@
     <content src="index.html" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
-    <preference name="target-device" value="handheld" />
+    <preference name="target-device" value="handset" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
@@ -80,12 +80,6 @@
     <splash platform="ios" src="Default-667h@2x.png" width="750" height="1334" />
     <splash platform="ios" src="Default-Portrait-736h@3x.png" width="1242" height="2208" />
     <splash platform="ios" src="Default-Landscape-736h@3x.png" width="2208" height="1242" />
-    <!-- iPad -->
-    <splash platform="ios" src="Default-Portrait.png" width="768" height="1024" />
-    <splash platform="ios" src="Default-Landscape.png" width="1024" height="768" />
-    <!-- Retina iPad -->
-    <splash platform="ios" src="Default-Portrait@2x.png" width="1536" height="2048" />
-    <splash platform="ios" src="Default-Landscape@2x.png" width="2048" height="1536" />
 
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
