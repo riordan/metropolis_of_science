@@ -80,7 +80,7 @@
     <script src="leaflet/leaflet.js"></script> 
     <script>
         var map = L.map('map').setView([40.808, -73.961], 14);
-        map.locate({setView: true, maxZoom: 16});
+        //map.locate({setView: true, maxZoom: 16});
 
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
@@ -96,6 +96,8 @@
 
         map.on('locationfound', onLocationFound);
         */
+
+        L.circle([position.coords.latitude, position.coords.longitude], 1000).addTo(map)
 
         var clandestine = L.marker([40.75978, -73.975856]).addTo(map);
         var flyRoom = L.marker([40.8086111, -73.9605556]).addTo(map);
