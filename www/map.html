@@ -29,38 +29,6 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" href="leaflet/leaflet.css" />
         <title>Metropolis of Science</title>
-        <script type="text/javascript" charset="utf-8">
-            // Wait for Cordova to load
-            //
-            document.addEventListener("deviceready", onDeviceReady, false);
-
-            // Cordova is ready
-            //
-            function onDeviceReady() {
-                navigator.geolocation.getCurrentPosition(onSuccess, onError);
-            }
-
-            // onSuccess Geolocation
-            //
-            function onSuccess(position) {
-                var element = document.getElementById('geolocation');
-                element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                                    'Longitude: '          + position.coords.longitude             + '<br />' +
-                                    'Altitude: '           + position.coords.altitude              + '<br />' +
-                                    'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                                    'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                                    'Heading: '            + position.coords.heading               + '<br />' +
-                                    'Speed: '              + position.coords.speed                 + '<br />' +
-                                    'Timestamp: '          +                                   position.timestamp          + '<br />';
-            }
-
-            // onError Callback receives a PositionError object
-            //
-            function onError(error) {
-                alert('code: '    + error.code    + '\n' +
-                        'message: ' + error.message + '\n');
-            }
-        </script>
     </head>
     <body>
         <div class="app">
@@ -78,16 +46,47 @@
             <div id="map" style="position:absolute; top:115px; width:100%; height:450px"></div>
         </div>
     <script src="leaflet/leaflet.js"></script> 
-    <script>
+    <script type="text/javascript" charset="utf-8">
+
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        }
+
+        // onSuccess Geolocation
+        //
+        function onSuccess(position) {
+            var element = document.getElementById('geolocation');
+            element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                                'Longitude: '          + position.coords.longitude             + '<br />' +
+                                'Altitude: '           + position.coords.altitude              + '<br />' +
+                                'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                                'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                                'Heading: '            + position.coords.heading               + '<br />' +
+                                'Speed: '              + position.coords.speed                 + '<br />' +
+                                'Timestamp: '          +                                   position.timestamp          + '<br />';
+        }
+
+        // onError Callback receives a PositionError object
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                    'message: ' + error.message + '\n');
+        }
         var map = L.map('map').setView([40.808, -73.961], 14);
-        //map.locate({setView: true, maxZoom: 16});
+        map.locate({setView: true, maxZoom: 16});
 
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             maxZoom: 17
         }).addTo(map);
 
-        /*
+
         function onLocationFound(e) {
             var radius = e.accuracy / 2;
             L.circle(e.latlng, radius).addTo(map);
@@ -95,9 +94,9 @@
 
 
         map.on('locationfound', onLocationFound);
-        */
 
-        L.circle([position.coords.latitude, position.coords.longitude], 1000).addTo(map)
+
+        //L.circle([position.coords.latitude, position.coords.longitude], 1000).addTo(map)
 
         var clandestine = L.marker([40.75978, -73.975856]).addTo(map);
         var flyRoom = L.marker([40.8086111, -73.9605556]).addTo(map);
