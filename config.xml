@@ -41,7 +41,9 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <icon src="icon.png" />
     <!-- iPhone 6 / 6+ -->
     <icon platform="ios" src="icon-60@3x.png" width="180" height="180" />
