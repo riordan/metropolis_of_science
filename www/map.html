@@ -55,6 +55,10 @@
             maxZoom: 17
         }).addTo(map);
 
+        document.addEventListener("deviceready", function(){
+            navigator.geolocation.getCurrentPosition(onsuccess, onerror, params);
+        }, false);
+
         function onLocationFound(e) {
             var radius = e.accuracy / 2;
             L.circle(e.latlng, radius).addTo(map);
