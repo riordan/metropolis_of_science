@@ -81,23 +81,28 @@
         var map = L.map('map').setView([40.808, -73.961], 14);
         //map.locate({setView: true, maxZoom: 16});
 
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        /*L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 17
+        }).addTo(map);*/
+
+        L.tileLayer('https://vector.mapzen.com/osm/all/{z}/{x}/{y}.{format}?api_key=vector-tiles-p_P79Fk', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             maxZoom: 17
         }).addTo(map);
 
 
-        /*function onLocationFound(e) {
+        function onLocationFound(e) {
             var radius = e.accuracy / 2;
             L.circle(e.latlng, radius).addTo(map);
         }
-        */
+        
 
 
         //map.on('locationfound', onLocationFound);
 
 
-        L.circle([position.coords.latitude, position.coords.longitude], 1000).addTo(map)
+        //L.circle([position.coords.latitude, position.coords.longitude], 1000).addTo(map)
 
         var clandestine = L.marker([40.75978, -73.975856]).addTo(map);
         var flyRoom = L.marker([40.8086111, -73.9605556]).addTo(map);
