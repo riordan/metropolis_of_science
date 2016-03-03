@@ -60,6 +60,7 @@
 
         // onSuccess Geolocation
         //
+        var myLocation;
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
             element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
@@ -69,7 +70,8 @@
                                 'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
                                 'Heading: '            + position.coords.heading               + '<br />' +
                                 'Speed: '              + position.coords.speed                 + '<br />' +
-                                'Timestamp: '          +                                   position.timestamp          + '<br />';
+                                'Timestamp: '          + position.timestamp          + '<br />';
+            myLocation = [position.coords.latitude, position.coords.longitude];
         }
 
         // onError Callback receives a PositionError object
@@ -81,10 +83,10 @@
         var map = L.map('map').setView([40.808, -73.961], 14);
         //map.locate({setView: true, maxZoom: 16});
 
-        L.tileLayer('https://api.mapbox.com/styles/v1/jfs2118/cilbjzefm000m9jm180qvi5op/tiles/1/1/0?access_token=pk.eyJ1IjoiamZzMjExOCIsImEiOiJlMUQzd2YwIn0.WLb3PYDt2z-XttOLFcQlVQ', {
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             maxZoom: 17
-        }).addTo(map);
+        }).addTo(map)
 
         function onLocationFound(e) {
             var radius = e.accuracy / 2;
@@ -95,7 +97,7 @@
         //map.on('locationfound', onLocationFound);
 
 
-        //L.circle([position.coords.latitude, position.coords.longitude], 1000).addTo(map)
+        L.circle(myLocation, 1000).addTo(map)
 
         var clandestine = L.marker([40.75978, -73.975856]).addTo(map);
         var flyRoom = L.marker([40.8086111, -73.9605556]).addTo(map);
