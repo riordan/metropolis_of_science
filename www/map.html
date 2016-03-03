@@ -87,13 +87,14 @@
         }).addTo(map);
 
 
-        function onLocationFound(e) {
+        /*function onLocationFound(e) {
             var radius = e.accuracy / 2;
             L.circle(e.latlng, radius).addTo(map);
         }
+        */
 
 
-        map.on('locationfound', onLocationFound);
+        //map.on('locationfound', onLocationFound);
 
 
         //L.circle([position.coords.latitude, position.coords.longitude], 1000).addTo(map)
