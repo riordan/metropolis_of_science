@@ -93,9 +93,9 @@
             L.circle(e.latlng, radius).addTo(map);
         }
         
-        //map.on('locationfound', onLocationFound);
+        map.on('locationfound', onLocationFound);
 
-        L.circle(myLocation, 1000).addTo(map);
+        //L.circle(myLocation, 1000).addTo(map);
 
         var clandestine = L.marker([40.75978, -73.975856]).addTo(map);
         var flyRoom = L.marker([40.8086111, -73.9605556]).addTo(map);
