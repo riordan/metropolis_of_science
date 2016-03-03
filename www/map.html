@@ -81,23 +81,16 @@
         var map = L.map('map').setView([40.808, -73.961], 14);
         //map.locate({setView: true, maxZoom: 16});
 
-        /*L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-            maxZoom: 17
-        }).addTo(map);*/
-
-        L.tileLayer('https://vector.mapzen.com/osm/all/{z}/{x}/{y}.MVT?api_key=vector-tiles-p_P79Fk', {
+        L.tileLayer('https://api.mapbox.com/styles/v1/jfs2118/cilbjzefm000m9jm180qvi5op/tiles/1/1/0@2x?access_token=pk.eyJ1IjoiamZzMjExOCIsImEiOiJlMUQzd2YwIn0.WLb3PYDt2z-XttOLFcQlVQ', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             maxZoom: 17
         }).addTo(map);
-
 
         function onLocationFound(e) {
             var radius = e.accuracy / 2;
             L.circle(e.latlng, radius).addTo(map);
         }
         
-
 
         //map.on('locationfound', onLocationFound);
 
