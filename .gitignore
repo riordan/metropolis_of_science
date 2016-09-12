@@ -1,0 +1,4 @@
+# Ignore Cordova/Phonegap `platforms/` & `plugins/` folders - rebuild locally
+platforms/
+plugins/
+.DS_Store
