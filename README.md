@@ -62,3 +62,11 @@ OR
 
 $ cordova build android
 ```
+
+
+## For Testing The Project
+To test for the Android project, open it (`platforms/android`) in Android Studio.
+
+Likewise for testing the iOS app, open it (`platforms/ios`) in XCode and run it in the emulator there.
+
+There's ways to do this from the command line but `¯\_(ツ)_/¯`.
