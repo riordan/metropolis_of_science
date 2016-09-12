@@ -45,7 +45,7 @@
             </div>
             <div id="map" style="position:absolute; top:115px; width:100%; height:450px"></div>
         </div>
-    <script src="leaflet/leaflet.js"></script> 
+    <script src="leaflet/leaflet.js"></script>
     <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
@@ -83,8 +83,8 @@
         var map = L.map('map').setView([40.808, -73.961], 14);
         //map.locate({setView: true, maxZoom: 16});
 
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        L.tileLayer('http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.png', {
+            attribution: '<a id="home-link" target="_top" href="http://maps.stamen.com/">Map tiles</a> by <a target="_top" href="http://stamen.com">Stamen Design</a>, under <a target="_top" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data © <a target="_top" href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.',
             maxZoom: 17
         }).addTo(map)
 
@@ -92,7 +92,7 @@
             var radius = e.accuracy / 2;
             L.circle(e.latlng, radius).addTo(map);
         }
-        
+
         map.on('locationfound', onLocationFound);
 
         //L.circle(myLocation, 1000).addTo(map);
